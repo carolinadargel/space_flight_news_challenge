@@ -1,0 +1,9 @@
+.fixFooter {
+    bottom: 0;
+    width: 90%;
+    text-align: center;
+}
+
+.p {
+    align-self: flex-start;
+}
