@@ -4,7 +4,7 @@
 
 ## Sobre
 
-Este projeto foi desenvolvido para atender a proposta de um desafio Fullstack, cuja proposta era fazer uma aplicação web para armazenar e exibir notícias sobre ciência espacial. Foi desenvolvida uma REST API que alimenta um banco de dados com informações de uma APi pública, a [Space Flight News](https://api.spaceflightnewsapi.net/v3/documentation). No frontend, foi desenvolvido uma SPA utilizando React e Bootstrap, para consumir e exibir as informações do banco.
+Este projeto foi desenvolvido para atender a um desafio Fullstack cuja proposta era fazer uma aplicação web para armazenar e exibir notícias sobre vôos espacial. Foi desenvolvida uma REST API que alimenta um banco de dados com informações de uma APi pública, a [Space Flight News](https://api.spaceflightnewsapi.net/v3/documentation). No frontend, foi desenvolvido uma SPA utilizando React e Bootstrap, para consumir e exibir as informações do banco.
 
 ## Tech-Stack
 
