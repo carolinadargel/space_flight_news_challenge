@@ -22,6 +22,8 @@ Node-cron
 
 *Frontend:*
 
+Javascript
+
 React
 
 NodeJS
