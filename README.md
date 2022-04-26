@@ -48,7 +48,5 @@ Instale os pacotes Node na raiz do projeto frontend (cmd npm install).
 
 Rode o projeto para iniciar o servidor (cmd npm start).
 
-<iframe width="640" height="360" src="https://www.loom.com/embed/9040164fe03a473787b50b0f79b6efb6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
 
 >  This is a challenge by [Coodesh](https://coodesh.com/)
