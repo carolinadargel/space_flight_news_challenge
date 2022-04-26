@@ -36,7 +36,7 @@ Bootstrap
 
 Clone este repositório, preencha o arquivo .env com as informações passadas no exemplo (arquivo .env example).
 
-Instale o Node na raiz do projeto backend (cmd npm install).
+Instale os pacotes Node na raiz do projeto backend (cmd npm install).
 
 Rode o projeto para iniciar o servidor (cmd npm start).
 
@@ -44,7 +44,7 @@ Você pode visualizar os resultados das consultas na porta 8080 do seu servidor 
 
 *Frontend:*
 
-Instale o node na raiz do projeto frontend (cmd npm install).
+Instale os pacotes Node na raiz do projeto frontend (cmd npm install).
 
 Rode o projeto para iniciar o servidor (cmd npm start).
 
