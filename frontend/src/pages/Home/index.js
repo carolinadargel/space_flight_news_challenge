@@ -75,11 +75,6 @@ function Home() {
     }
   };
 
-  // const sortResult = (articles, sort) => {
-  //   articles.sort
-
-  // }
-
   return (
     <div className="container">   
       <div className="d-flex flex-row-reverse">
