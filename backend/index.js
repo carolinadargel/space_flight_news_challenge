@@ -24,7 +24,7 @@ app.use(cors()).use(json()).use(router);
   }
 })();
 
-const job = nodeCron.schedule("0 9 * * *", updateDb,
+const job = nodeCron.schedule("* 9 * * *", updateDb,
     {
     scheduled: false,
     timezone: "America/Sao_Paulo"

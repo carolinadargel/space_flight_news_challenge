@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
-import { Link } from 'react-router-dom';
 import './home.css';
 
 function Home() {
@@ -10,13 +9,14 @@ function Home() {
   const [start, setStart] = useState(0);
   const [search, setSearch] = useState(false)
 
+
   useEffect(() => {
 
     let isCancelled = false;
     const loadArticles = async () => {
-
+    
       if (!isCancelled) {
-        let endpoint = sort
+        let endpoint = sort  
         if (search) {endpoint = "/filterByName"}
         if (endpoint === 'asc' && !search){ endpoint = "/articles"}
         if (endpoint === 'desc' && !search) { endpoint = "/newest"}
@@ -29,6 +29,7 @@ function Home() {
             params: {
               _start: start,
               _title: search,
+              _sort: sort,
             }
           });
 
@@ -55,14 +56,16 @@ function Home() {
   };
 
   const switchSort = (newSort) => {
-    if (newSort === sort || search) { 
-    return }
+    if (newSort === sort) { return }
+    if (search) {   
+      setStart(0);
+      setSort(newSort); 
+    }
     setArticles([]);
     setStart(0);
     setSort(newSort);
   
   };
-
 
   const activateSearch = (event) => {
     if (event.key === 'Enter'){
@@ -72,10 +75,14 @@ function Home() {
     }
   };
 
+  // const sortResult = (articles, sort) => {
+  //   articles.sort
+
+  // }
+
   return (
-    <div className="container">
+    <div className="container">   
       <div className="d-flex flex-row-reverse">
-      
       <div className="dropdown p-2">
         <button className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" type="button" id="dropdownMenu2" aria-expanded="false">
           Sort
@@ -102,7 +109,7 @@ function Home() {
               <article className="card d-flex" key={article.id}>
                 <div className="card-wrapper left-card-1">
                   <div className="left-card-1">
-                    <img src={`${article.imageUrl}`} className="card-img-top" alt={article.title} />
+                    <img src={`${article.imageUrl}`} className="card-img-top" loading="lazy" alt={article.title} />
                   </div>
                   <div className="right-card-1">
                     <div className="card-body">
@@ -114,7 +121,7 @@ function Home() {
                         <div className="p-2 bd-highlight"> <a className="" rel="noreferrer" target="_blank" href={article.url}>{article.newsSite}</a></div>
                       </div>
                       <p className="card-text">{article.summary}</p>
-                      <Link className="btn btn-primary" to={`/article/${article.id}`}>Ver Mais</Link>
+                      <button className="btn btn-primary"><a className="btn-ver-mais" rel="noreferrer" target="_blank" href={article.url}>Ver Mais</a></button>
                     </div>
                   </div>
                 </div>
@@ -135,11 +142,11 @@ function Home() {
                       <div className="p-2 bd-highlight"> <a className="" rel="noreferrer" target="_blank" href={article.url}>{article.newsSite}</a></div>
                     </div>
                     <p className="card-text">{article.summary}</p>
-                    <Link className="btn btn-primary" to={`/article/${article.id}`}>Ver Mais</Link>
+                    <button className="btn btn-primary"><a className="btn-ver-mais" rel="noreferrer" target="_blank" href={article.url}>Ver Mais</a></button>
                   </div>
                 </div>
                 <div className="right-card-2">
-                  <img src={`${article.imageUrl}`} className="card-img-top" alt={article.title} />
+                  <img src={`${article.imageUrl}`} className="card-img-top" loading="lazy" alt={article.title} />
                 </div>
               </div>
             </article>

@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const ArticlesSchema = new Schema({
-  id: { type: String, required: true },
+  id: { type: Number, required: true },
   featured: { type: Boolean, required: true },
   title: { type: String, required: true },
   url: { type: String, required: true },

@@ -4,25 +4,33 @@ header{
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 60px;
+  height: 276px;
   background-color: #302E53;
+
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  height: 200px;
+}
+
+.logo-img{
+  height: 100px;
+  align-self: center;
+  margin: 18px;
 }
 
 .logo{
   text-decoration: none;
-  font-size: 30px;
+  font-size: 28px;
   cursor: pointer;
-  color: #D07017;
+  color: #d08017;
   font-weight: bold;
 }
 
-.logo:hover 
-
-{ opacity: 70%;
+.logo:hover {
+  opacity: 90%;
   color: #D07017;
-
-
-transition: 0.1s;
-
-
+  transition: 0.1s;
 }
